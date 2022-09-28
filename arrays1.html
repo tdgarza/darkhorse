@@ -9,7 +9,7 @@
     <link href="http://fonts.cdnfonts.com/css/garoa-hacker-clube" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/ballado" rel="stylesheet">
                 
-    <title>Document</title>
+    <title>Metodo de Gauss Simple</title>
 </head>
 <body>
     <h1>Metodo de Gauss Simple V.0.1</h1>
@@ -26,23 +26,23 @@
         <th style="font-size: 20px;">b</th>
         </tr>
         <tr>
-        <td><input id="a" size="5"><br> </td>
-        <td><input id="b" size="5"><br> </td>
-        <td><input id="c" size="5"><br> </td>
-        <td><input id="d" size="5"><br> </td>
+        <td><input id="a" size="5" type="text" name="array[]" value=""><br> </td>
+        <td><input id="b" size="5" type="text" name="array[]" value=""><br> </td>
+        <td><input id="c" size="5" type="text" name="array[]" value=""><br> </td>
+        <td><input id="d" size="5" type="text" name="array[]" value=""><br> </td>
 
         </tr>
         <tr>
-        <td><input id="e" size="5"><br> </td>
-        <td><input id="f" size="5"><br> </td>
-        <td><input id="g" size="5"><br> </td>
-        <td><input id="h" size="5"><br> </td>
+        <td><input id="e" size="5" type="text" name="array[]" value=""><br> </td>
+        <td><input id="f" size="5" type="text" name="array[]" value=""><br> </td>
+        <td><input id="g" size="5" type="text" name="array[]" value=""><br> </td>
+        <td><input id="h" size="5" type="text" name="array[]" value=""><br> </td>
     </tr>
     <tr>
-        <td><input id="i" size="5"><br> </td>
-        <td><input id="j" size="5"><br> </td>
-        <td><input id="k" size="5"><br> </td>
-        <td><input id="l" size="5"><br> </td>
+        <td><input id="i" size="5" type="text" name="array[]" value=""><br> </td>
+        <td><input id="j" size="5" type="text" name="array[]" value=""><br> </td>
+        <td><input id="k" size="5" type="text" name="array[]" value=""><br> </td>
+        <td><input id="l" size="5" type="text" name="array[]" value=""><br> </td>
     </tr>
         </tr>
         </table>
@@ -50,10 +50,13 @@
         <p style="background-color: #9bb9ee; color: #f1f1f1; font-weight: bold; color: rgb(83, 82, 82); font-size:20px" id="determinante1">Resultado: </p>  
         <p style="background-color: #9bb9ee; color: #f1f1f1; font-weight: bold; color: rgb(83, 82, 82); font-size:20px" id="determinante2">Resultado: </p>  
         <p style="background-color: #9bb9ee; color: #f1f1f1; font-weight: bold; color: rgb(83, 82, 82); font-size:20px" id="determinante3">Resultado: </p>  
+        
         <script>
 
     function myFunction(){
-        let a = document.getElementById("a").value;
+    
+
+        //let a = document.getElementById("a").value;
         let b = document.getElementById("b").value;
         let c = document.getElementById("c").value;
         let d = document.getElementById("d").value;
@@ -70,8 +73,16 @@
         var columna2 = [b,f,j];
         var columna3 = [c,g,k];
         var columna4 = [d,h,l];
-        var arreglo = new Array[{a,b,c,d},{e,f,g,h},{i,j,k,l}];
-        console.log("Valor del array " +arreglo);
+        
+        var o = "The respective values are :";
+        var input = document.getElementsByName('array[]');
+ 
+ for (var m = 0; m < input.length; m++) {
+     var n = input[m];
+     o = o + "array[" + m + "].value= "
+                        + n.value + " ";
+ }
+        console.log("el valor de a: " +a);
     
         var table= document.createElement('table'), thead = document.createElement('thead'),
             tbody = document.createElement('tbody'), th, tr, td;
