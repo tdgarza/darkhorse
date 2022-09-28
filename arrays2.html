@@ -18,6 +18,7 @@
         <div class="wave"></div>
         <div class="wave"></div>
       </div>
+      <form class="" action="arrays2.html" method="post">
     <table>
         <tr>
         <th style="font-size: 20px;">x</th>
@@ -50,39 +51,19 @@
         <p style="background-color: #9bb9ee; color: #f1f1f1; font-weight: bold; color: rgb(83, 82, 82); font-size:20px" id="determinante1">Resultado: </p>  
         <p style="background-color: #9bb9ee; color: #f1f1f1; font-weight: bold; color: rgb(83, 82, 82); font-size:20px" id="determinante2">Resultado: </p>  
         <p style="background-color: #9bb9ee; color: #f1f1f1; font-weight: bold; color: rgb(83, 82, 82); font-size:20px" id="determinante3">Resultado: </p>  
-        
+    </form>
+    <p id="var"></p> 
         <script>
 
     function myFunction(){
     
-
-        //let a = document.getElementById("a").value;
-        let b = document.getElementById("b").value;
-        let c = document.getElementById("c").value;
-        let d = document.getElementById("d").value;
-        let e = document.getElementById("e").value;
-        let f = document.getElementById("f").value;
-        let g = document.getElementById("g").value;
-        let h = document.getElementById("h").value;
-        let i = document.getElementById("i").value;
-        let j = document.getElementById("j").value;
-        let k = document.getElementById("k").value;
-        let l = document.getElementById("l").value;
-        
         var columna1 = [a,e,i];
         var columna2 = [b,f,j];
         var columna3 = [c,g,k];
         var columna4 = [d,h,l];
-        
-        var o = "The respective values are :";
-        var input = document.getElementsByName('array[]');
- 
- for (var m = 0; m < input.length; m++) {
-     var n = input[m];
-     o = o + "array[" + m + "].value= "
-                        + n.value + " ";
- }
-        console.log("el valor de a: " +a);
+
+        var tabla=[[a,b,c,d],[e,f,g,h],[i,j,k,l]];
+        console.log("El valor de la tabla es: " +tabla);
     
         var table= document.createElement('table'), thead = document.createElement('thead'),
             tbody = document.createElement('tbody'), th, tr, td;
@@ -161,7 +142,7 @@
          document.getElementById("determinante1").innerHTML = x1;  
          document.getElementById("determinante2").innerHTML = x2;  
          document.getElementById("determinante3").innerHTML = x3;  
-     
+         document.getElementById("var").innerHTML = o; 
         }
         </script>
 </body>

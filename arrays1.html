@@ -25,25 +25,29 @@
         <th style="font-size: 20px;">z</th>
         <th style="font-size: 20px;">b</th>
         </tr>
-        <tr>
-        <td><input id="a" size="5" type="text" name="array[]" value=""><br> </td>
-        <td><input id="b" size="5" type="text" name="array[]" value=""><br> </td>
-        <td><input id="c" size="5" type="text" name="array[]" value=""><br> </td>
-        <td><input id="d" size="5" type="text" name="array[]" value=""><br> </td>
-
-        </tr>
-        <tr>
-        <td><input id="e" size="5" type="text" name="array[]" value=""><br> </td>
-        <td><input id="f" size="5" type="text" name="array[]" value=""><br> </td>
-        <td><input id="g" size="5" type="text" name="array[]" value=""><br> </td>
-        <td><input id="h" size="5" type="text" name="array[]" value=""><br> </td>
-    </tr>
-    <tr>
-        <td><input id="i" size="5" type="text" name="array[]" value=""><br> </td>
-        <td><input id="j" size="5" type="text" name="array[]" value=""><br> </td>
-        <td><input id="k" size="5" type="text" name="array[]" value=""><br> </td>
-        <td><input id="l" size="5" type="text" name="array[]" value=""><br> </td>
-    </tr>
+        <tr>    <th style="font-size: 20px;">x</th>
+                <th style="font-size: 20px;">y</th>
+                <th style="font-size: 20px;">z</th>
+                <th style="font-size: 20px;">b</th>
+                </tr>
+                <tr>
+                <td><input id="a" size="5"><br> </td>
+                <td><input id="b" size="5"><br> </td>
+                <td><input id="c" size="5"><br> </td>
+                <td><input id="d" size="5"><br> </td>
+        
+                </tr>
+                <tr>
+                <td><input id="e" size="5"><br> </td>
+                <td><input id="f" size="5"><br> </td>
+                <td><input id="g" size="5"><br> </td>
+                <td><input id="h" size="5"><br> </td>
+            </tr>
+            <tr>
+                <td><input id="i" size="5"><br> </td>
+                <td><input id="j" size="5"><br> </td>
+                <td><input id="k" size="5"><br> </td>
+                <td><input id="l" size="5"><br> </td>
         </tr>
         </table>
         <br><button style="text-shadow: 1px 1px #9bb9ee;" type="button" onclick="myFunction()">Procesar</button>
@@ -56,7 +60,7 @@
     function myFunction(){
     
 
-        //let a = document.getElementById("a").value;
+        let a = document.getElementById("a").value;
         let b = document.getElementById("b").value;
         let c = document.getElementById("c").value;
         let d = document.getElementById("d").value;
@@ -68,22 +72,14 @@
         let j = document.getElementById("j").value;
         let k = document.getElementById("k").value;
         let l = document.getElementById("l").value;
-        
-        var columna1 = [a,e,i];
-        var columna2 = [b,f,j];
-        var columna3 = [c,g,k];
-        var columna4 = [d,h,l];
-        
-        var o = "The respective values are :";
-        var input = document.getElementsByName('array[]');
- 
- for (var m = 0; m < input.length; m++) {
-     var n = input[m];
-     o = o + "array[" + m + "].value= "
-                        + n.value + " ";
- }
-        console.log("el valor de a: " +a);
-    
+
+        var tabla=[[a,b,c,d],[e,f,g,h],[i,j,k,l]];
+        for(r=0;r<3;r++){
+            for(q=0;q<4;q++){
+                console.log("El valor de la tabla es: " +tabla[r][q]);
+            }
+        }
+
         var table= document.createElement('table'), thead = document.createElement('thead'),
             tbody = document.createElement('tbody'), th, tr, td;
             th = document.createElement('th'),          
@@ -106,22 +102,22 @@
             for(var m=0;m<3;m++){
             tr = document.createElement('tr'),
             td= document.createElement('td');
-            td.innerHTML=columna1[m];
+            td.innerHTML=3;
             tr.appendChild(td);
-            console.log("Columna: " +columna1[m])
+            
 
             td = document.createElement('td');
-            td.innerHTML=columna2[m];
-            tr.appendChild(td);
-            tbody.appendChild(tr);
-
-            td = document.createElement('td');
-            td.innerHTML=columna3[m];
+            td.innerHTML=3;
             tr.appendChild(td);
             tbody.appendChild(tr);
 
             td = document.createElement('td');
-            td.innerHTML=columna4[m];
+            td.innerHTML=3;
+            tr.appendChild(td);
+            tbody.appendChild(tr);
+
+            td = document.createElement('td');
+            td.innerHTML=3;
             tr.appendChild(td);
             tbody.appendChild(tr);
          }
