@@ -2,6 +2,9 @@ body{
     background-color: #0a0c4b;
     text-align: center;
     font-family: 'Ballado', sans-serif;
+    background-image: url("back1.png");
+    width: 800px;
+    background-size: cover;
 
 }
 table{
