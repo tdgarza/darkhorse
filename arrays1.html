@@ -51,7 +51,8 @@
         </tr>
         </table>
         <br><button style="text-shadow: 1px 1px #9bb9ee;" type="button" onclick="myFunction()">Procesar</button>
-        <p style="background-color: #9bb9ee; color: #f1f1f1; font-weight: bold; color: rgb(83, 82, 82); font-size:20px" id="determinante1">Resultado: </p>  
+     
+        <p style="background-color: #9bb9ee; color: #f1f1f1; font-weight: bold; color: rgb(83, 82, 82); font-size:20px;" id="determinante1">Resultado: </p>  
         <p style="background-color: #9bb9ee; color: #f1f1f1; font-weight: bold; color: rgb(83, 82, 82); font-size:20px" id="determinante2">Resultado: </p>  
         <p style="background-color: #9bb9ee; color: #f1f1f1; font-weight: bold; color: rgb(83, 82, 82); font-size:20px" id="determinante3">Resultado: </p>  
         
@@ -59,7 +60,6 @@
 
     function myFunction(){
     
-
         let a = document.getElementById("a").value;
         let b = document.getElementById("b").value;
         let c = document.getElementById("c").value;
@@ -73,12 +73,11 @@
         let k = document.getElementById("k").value;
         let l = document.getElementById("l").value;
 
-        var tabla=[[a,b,c,d],[e,f,g,h],[i,j,k,l]];
-        for(r=0;r<3;r++){
-            for(q=0;q<4;q++){
-                console.log("El valor de la tabla es: " +tabla[r][q]);
+        var tablas=[[a,b,c,d],[e,f,g,h],[i,j,k,l]];
+
+        for(let tabla of tablas){
+                console.log("El valor de la tabla es: " +tabla);
             }
-        }
 
         var table= document.createElement('table'), thead = document.createElement('thead'),
             tbody = document.createElement('tbody'), th, tr, td;
@@ -102,22 +101,22 @@
             for(var m=0;m<3;m++){
             tr = document.createElement('tr'),
             td= document.createElement('td');
-            td.innerHTML=3;
+            td.innerHTML=tablas[m][0];
             tr.appendChild(td);
             
 
             td = document.createElement('td');
-            td.innerHTML=3;
+            td.innerHTML=tablas[m][1];
             tr.appendChild(td);
             tbody.appendChild(tr);
 
             td = document.createElement('td');
-            td.innerHTML=3;
+            td.innerHTML=tablas[m][2];
             tr.appendChild(td);
             tbody.appendChild(tr);
 
             td = document.createElement('td');
-            td.innerHTML=3;
+            td.innerHTML=tablas[m][3];
             tr.appendChild(td);
             tbody.appendChild(tr);
          }
