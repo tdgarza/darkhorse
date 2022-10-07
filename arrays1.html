@@ -12,19 +12,35 @@
     <title>Metodo de Gauss Simple</title>
 </head>
 <body>
+    <div class="navbar">
+        <div class="container nav-container">
+            <input class="checkbox" type="checkbox" name="" id="" />
+            <div class="hamburger-lines">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+              <span class="line line3"></span>
+            </div>  
+          <div class="logo">
+            <h3>Navbar</h3>
+          </div>
+          <div class="menu-items">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">blogs</a></li>
+            <li><a href="#">portfolio</a></li>
+            <li><a href="#">contact</a></li>
+          </div>
+        </div>
+      </div>
     <h1>Metodo de Gauss Simple V.0.1</h1>
+
     <div class="ocean">
         <div class="wave"></div>
         <div class="wave"></div>
         <div class="wave"></div>
       </div>
     <table>
-        <tr>
-        <th style="font-size: 20px;">x</th>
-        <th style="font-size: 20px;">y</th>
-        <th style="font-size: 20px;">z</th>
-        <th style="font-size: 20px;">b</th>
-        </tr>
+   
         <tr>    <th style="font-size: 20px;">x</th>
                 <th style="font-size: 20px;">y</th>
                 <th style="font-size: 20px;">z</th>
@@ -59,7 +75,7 @@
         <script>
 
     function myFunction(){
-    
+     
         let a = document.getElementById("a").value;
         let b = document.getElementById("b").value;
         let c = document.getElementById("c").value;
@@ -74,10 +90,22 @@
         let l = document.getElementById("l").value;
 
         var tablas=[[a,b,c,d],[e,f,g,h],[i,j,k,l]];
-
+        let n=tablas.length;
+            console.log("El valor de n: " +n);
         for(let tabla of tablas){
                 console.log("El valor de la tabla es: " +tabla);
             }
+            /*
+        for(var s=1; s<=12; s++){
+            for(var t=1;t<=12;t++){
+                if(t!=s){
+                    let r=tablas[t][s]/tablas[s][s];
+                    for(var u=1; k<=13;k++){
+                        tablas[t][s]=tablas[t][u]-r*tablas[s][u];
+                    }
+                }
+            }
+        }*/
 
         var table= document.createElement('table'), thead = document.createElement('thead'),
             tbody = document.createElement('tbody'), th, tr, td;
@@ -120,12 +148,30 @@
             tr.appendChild(td);
             tbody.appendChild(tr);
          }
-         let coeficiente1=(e/a);
-         let coeficiente2=(i/a);
-         let aprima=coeficiente1*a;
-         let bprima=coeficiente1*b;
-         let cprima=coeficiente1*c;
-         let dprima=coeficiente1*d;
+
+                let factor1=tablas[0][0];
+                let factor2=tablas[1][1];
+                let factor3=tablas[2][2];                   
+                console.log("El valor del factor1 es: " +factor1);
+                console.log("El valor del factor2 es: " +factor2);
+                console.log("El valor del factor3 es: " +factor3); 
+/*
+        for(var y=0;y<4;y++){
+            for(var w=0;w<4;w++){
+                console.log("El valor de la tabla es: " +tablas[y][w]);
+            }}
+*/
+           
+let x;
+         let coeficiente1=tablas[1][0]/tablas[0][0]; 
+         console.log("El valor del primer coeficiente: " +coeficiente1);
+         let coeficiente2=tablas[2][0]/tablas[0][0]; 
+         let filaprima=tablas.map(x*2);
+         console.log("El valor de la prima 1: " +filaprima);
+         let aprima=coeficiente1*tablas[0][0];
+         let bprima=coeficiente1*tablas[0][1];
+         let cprima=coeficiente1*tablas[0][2];
+         let dprima=coeficiente1*tablas[0][3];
          let enueva=aprima-e;
          let fnueva=bprima-f;
          let gnueva=cprima-g;

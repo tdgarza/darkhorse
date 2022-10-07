@@ -1,47 +1,35 @@
-body{
-    background-color: #0a0c4b;
-    text-align: center;
-    font-family: 'Ballado', sans-serif;
-    background-image: url("back1.png");
-    width: 800px;
-    background-size: cover;
-
-}
-table{
-    width: 300px;
-    height: 150px;
-   align-items: center;
-   background-color: #FAF0CA;
-   margin-left: auto;
-   margin-right: auto;
-   border-style: groove;
-   border-color: #f4d35e;
-   
-   border-collapse: collapse;
-   box-shadow: 10px 10px 10px #FAF0CA;
-   border-width: 2px;
-}
-tr,th,td{
-    color: #1a1a41;
-    border-width: 5PX;
-}
-button{
-    background-color: #505581;
-    color: #FAF0CA;
-    width: 300px;
-    height: 40px;
-    font-size: 20px;
-    font-family: 'Ballado', sans-serif;
-    box-shadow: 5px 5px 10px #7c80a4;
-}
-h1{
-    color: #f4d35e;
-    text-shadow: 2px 1px 2px #2e2f5b;
-    font-family: 'Garoa Hacker Clube', sans-serif;
-                                                
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#page {
+    display: grid;
+    width: 100%;
+    height: 250px;
+    grid-template-areas:
+      "head head"
+      "nav  main"
+      "nav  foot";
+    grid-template-rows: 50px 1fr 30px;
+    grid-template-columns: 250px 1fr;
+  }
+  
+  #page > header {
+    grid-area: head;
+    background-color: #8ca0ff;
+  }
+  
+  #page > nav {
+    grid-area: nav;
+    background-color: #ffa08c;
+  }
+  
+  #page > main {
+    grid-area: main;
+    background-color: #ffff64;
+  }
+  
+  #page > footer {
+    grid-area: foot;
+    background-color: #8cffa0;
+  }
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
   margin: 0;
