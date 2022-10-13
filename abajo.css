@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #465c71;
 }
 
 body{
@@ -70,7 +71,7 @@ body{
     font-size: 15px;
     line-height: 24px;
     color: #737373;
-    height: 300px;
+    height: 400px;
   }
   .site-footer hr{
     border-top-color: #bbb;
@@ -98,12 +99,13 @@ body{
     display: block;
   }
   .footer-links a{
-    color: #737373;
+    color: #ffdb17;
   }
   .footer-links a:active, .footer-links a:focus, .footer-links a:hoover {
     color: #3366cc;
     text-decoration: none;
   }
+  
   .footer-links.inline li{
     display: inline-block;
   }
@@ -117,7 +119,7 @@ body{
     margin-left: 6px;
     margin-right: 0;
     border-radius: 100%;
-    background-color: #33353d;
+    background-color: #3a3d33;
   }
   .copyright-text{
     margin: 0;
@@ -188,12 +190,21 @@ body{
   .social-icons a.dribble:hover{
     background-color: #ea4c89;
   }
-  @media (max-width:767px){
+  @media (max-width:1200px){
     .social-icons li.tittle{
         display: block;
         margin-right: 0;
         font-weight: 600
     }
+  }
+  span{
+    color: #eceeef;
+    text-align: justify;
+    text-justify: inter-word;
+    
+  }
+  hr{
+    color: red;
   }
 
   
