@@ -7,7 +7,43 @@
     <title>Prueba</title>
 </head>
 <body>
-    <py-script>print('Hola mundo')</py-script>
+    <h1>Ejercicio Sencillo 1 Arrays de Mayor, Menor y Media</h1>
+    <p id="'parrafo">Introduce los enteros separados por comas</p>
+    <input type="text" id="text"></input>
+    <input type="button" value="Cargar ejemplo" onclick="cargarejemplo()"></input>
+    <input type="button" value="calcular" onclick="calcular()"></input>
+    <input type="button" value="Reiniciar" onclick="reiniciar()"></input>
+    <p id="array"></p>
+    <p id="resultado"></p>
+   <script>
+    function cargarejemplo(){
+        document.getElementById("text").value="5,99,43,12,37";
+        }
+    function reiniciar(){
+        location.reload();
+    }
+    function calcular(){
+        var array=document.getElementById("text").value.split(/,/);
+        var mayor=-Infinity,menor=+Infinity,suma=0,media=0;
+        //Suma
+        for(i=0;i<array.lenght;i++){
+            suma=parseInt(array[i])+suma;
+        }
+        //Media
+        media=suma/array.lenght;
+        //Menor
+        for(i=0;i<array.lenght;i++){
+            if(parseInt(array[i])<menor) menor=array[i];
+        }
+        //mayor
+        for(i=0;i<array.lenght;i++){
+            if(parseInt(array[i])>mayor) mayor=array[i];
+        }
+        //resultado
+        document.getElementById("resultado").innerHTML="La suma es:"+suma+"<br>"+ "La media es: "+media+"<br>"+"El mayor es:"+mayor+"<br>"+"El menor es:"+menor+"<br>"
+    }
+
+   </script>
     
 </body>
 </html>
